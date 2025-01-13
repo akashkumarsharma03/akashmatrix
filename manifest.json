@@ -1,0 +1,22 @@
+{
+    "name": "Akashmatix",
+    "short_name": "Akashmatix",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#004080",
+    "description": "Your learning platform for coding and exam preparation.",
+    "icons": [
+      {
+        "src": "https://instagram.fdel3-2.fna.fbcdn.net/v/t51.2885-19/403903458_204381439375861_4661438855554710139_n.jpg?stp=dst-jpg_s320x320_tt6&_nc_ht=instagram.fdel3-2.fna.fbcdn.net&_nc_cat=101&_nc_ohc=cfj117B84IUQ7kNvgHupNtT&_nc_gid=c0b9d2a72bc2493fbb2735f69f5891f1&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AYCgpLzm_L4EbZcEZO08fgKwkyLztJGl5D4ibzSiYXW7FQ&oe=678B285D&_nc_sid=8b3546",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "https://instagram.fdel3-2.fna.fbcdn.net/v/t51.2885-19/403903458_204381439375861_4661438855554710139_n.jpg?stp=dst-jpg_s320x320_tt6&_nc_ht=instagram.fdel3-2.fna.fbcdn.net&_nc_cat=101&_nc_ohc=cfj117B84IUQ7kNvgHupNtT&_nc_gid=c0b9d2a72bc2493fbb2735f69f5891f1&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AYCgpLzm_L4EbZcEZO08fgKwkyLztJGl5D4ibzSiYXW7FQ&oe=678B285D&_nc_sid=8b3546",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

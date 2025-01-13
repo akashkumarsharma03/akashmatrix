@@ -18,12 +18,12 @@ let currentCourseIndex = 0;
 const typingElement = document.getElementById("typing-text");
 
 function changeCourseText() {
-    typingElement.textContent = "";  // Clear current text
+    typingElement.textContent = "Learn ";  // Clear current text
     const courseText = courseNames[currentCourseIndex];
     
     let i = 0;
     let typingInterval = setInterval(() => {
-        typingElement.textContent += courseText[i];
+        typingElement.textContent +=  courseText[i];
         i++;
         if (i === courseText.length) {
             clearInterval(typingInterval);
