@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "@capacitor/cli": "^6.2.0",
+    "@capacitor/core": "^6.2.0"
+  },
+  "name": "akashmatrix",
+  "version": "1.0.0",
+  "description": "app",
+  "main": "script.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akashkumarsharma03/akashmatrix.git"
+  },
+  "keywords": [
+    "akashmatrix"
+  ],
+  "author": "akash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akashkumarsharma03/akashmatrix/issues"
+  },
+  "homepage": "https://github.com/akashkumarsharma03/akashmatrix#readme"
+}
