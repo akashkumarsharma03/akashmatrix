@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: black;
+    color: white;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 0.5s forwards;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #004080;
+}
+
+#hero {
+    background-color: black;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 1s forwards;
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 1.5s forwards;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 2s forwards;
+}
+
+.cta-btn {
+    background-color: #004080;
+    color: white;
+    padding: 8px 16px; /* Smaller padding */
+    font-size: 1em; /* Smaller font size */
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #003366;
+}
+
+.course-section {
+    padding: 40px 0;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 2.5s forwards;
+}
+
+.course-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.course-catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.course-card {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 3s forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.course-card h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.course-card p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.course-card a {
+    padding: 8px 16px; /* Smaller padding */
+    font-size: 1em; /* Smaller font size */
+    background-color: #004080;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.course-card a:hover {
+    background-color: #003366;
+}
+
+.purchase-btn {
+    padding: 8px 16px; /* Smaller padding */
+    font-size: 1em; /* Smaller font size */
+    background-color: #ff6600;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.purchase-btn:hover {
+    background-color: #cc5200;
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.course-card:hover {
+    transform: translateY(-10px) rotateY(15deg);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 4s forwards;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    background-color: #222;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1em;
+}
+
+form button {
+    padding: 8px 16px; /* Smaller padding */
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #003366;
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    .course-card h3 {
+        font-size: 1.4em;
+    }
+
+    .course-card p {
+        font-size: 1em;
+    }
+
+    .cta-btn, .course-card a, .purchase-btn, form button {
+        font-size: 0.9em; /* Slightly smaller buttons on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    #hero h2 {
+        font-size: 1.8em;
+    }
+
+    .course-card h3 {
+        font-size: 1.2em;
+    }
+
+    .course-card p {
+        font-size: 0.9em;
+    }
+
+    .cta-btn, .course-card a, .purchase-btn, form button {
+        padding: 6px 12px; /* Smaller padding for mobile */
+        font-size: 0.8em; /* Even smaller font size */
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Light theme styles */
+body.light-theme {
+    background-color: white;
+    color: black;
+}
+
+body.light-theme header, 
+body.light-theme footer {
+    background-color: white;
+    color: black;
+}
+
+body.light-theme a {
+    color: #004080;
+}
+
+body.light-theme a:hover {
+    color: #003366;
+}
+
+/* Theme toggle button */
+.theme-btn {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: inherit;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.theme-btn:hover {
+    transform: scale(1.2);
+}
+
+
+/* Typing effect styles */
+.typing-animation p {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff6600;
+    border-right: 4px solid #ff6600;
+    display: inline-block;
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
