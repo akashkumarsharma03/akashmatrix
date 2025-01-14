@@ -1,5 +1,11 @@
 // Get the theme toggle button
-const themeToggleButton = document.getElementById("theme-toggle");
+// Theme toggle button
+const themeToggleButton = document.getElementById('theme-toggle');
+
+themeToggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('light-theme');
+});
+
 
 // Check for saved theme preference in localStorage
 if (localStorage.getItem("theme") === "light") {
@@ -40,16 +46,16 @@ function changeCourseText() {
 changeCourseText();
 
 // Toggle the theme when the button is clicked
-themeToggleButton.addEventListener("click", () => {
-    if (document.body.classList.contains("dark-theme")) {
-        document.body.classList.remove("dark-theme");
-        document.body.classList.add("light-theme");
-        localStorage.setItem("theme", "light");
-        themeToggleButton.textContent = "🌙";  // Show moon icon for dark theme
-    } else {
-        document.body.classList.remove("light-theme");
-        document.body.classList.add("dark-theme");
-        localStorage.setItem("theme", "dark");
-        themeToggleButton.textContent = "🌞";  // Show sun icon for light theme
-    }
-});
+// themeToggleButton.addEventListener("click", () => {
+//     if (document.body.classList.contains("dark-theme")) {
+//         document.body.classList.remove("dark-theme");
+//         document.body.classList.add("light-theme");
+//         localStorage.setItem("theme", "light");
+//         themeToggleButton.textContent = "🌙";  // Show moon icon for dark theme
+//     } else {
+//         document.body.classList.remove("light-theme");
+//         document.body.classList.add("dark-theme");
+//         localStorage.setItem("theme", "dark");
+//         themeToggleButton.textContent = "🌞";  // Show sun icon for light theme
+//     }
+// });
