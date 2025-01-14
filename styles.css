@@ -9,7 +9,6 @@ body {
     background-color: black;
     color: white;
     line-height: 1.6;
-    animation: fadeIn 1.5s ease-out;
     font-size: 16px;
     padding: 0;
 }
@@ -19,13 +18,13 @@ body {
     margin: 0 auto;
 }
 
+/* Header Section */
 header {
     background-color: black;
     color: white;
     padding: 20px 0;
     text-align: center;
-    opacity: 0;
-    animation: fadeIn 2s ease-out 0.5s forwards;
+    opacity: 1; /* Ensure visibility */
     position: relative;
     z-index: 2;
 }
@@ -59,27 +58,21 @@ header nav ul li a:hover {
     color: #004080;
 }
 
-/* Responsive Design for Mobile */
+/* Hero Section */
 #hero {
     background-color: black;
     color: white;
     padding: 60px 0;
     text-align: center;
-    opacity: 0;
-    animation: fadeIn 2s ease-out 1s forwards;
 }
 
 #hero h2 {
     font-size: 2.5em;
-    opacity: 0;
-    animation: fadeIn 2s ease-out 1.5s forwards;
 }
 
 #hero p {
     font-size: 1.2em;
     margin-top: 20px;
-    opacity: 0;
-    animation: fadeIn 2s ease-out 2s forwards;
 }
 
 .cta-btn {
@@ -100,8 +93,6 @@ header nav ul li a:hover {
 /* Course Section */
 .course-section {
     padding: 40px 0;
-    opacity: 0;
-    animation: fadeIn 2s ease-out 2.5s forwards;
 }
 
 .course-section h2 {
@@ -124,8 +115,6 @@ header nav ul li a:hover {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    opacity: 0;
-    animation: fadeIn 2s ease-out 3s forwards;
     display: flex;
     flex-direction: column;
     align-items: center;
