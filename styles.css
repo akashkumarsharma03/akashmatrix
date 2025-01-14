@@ -18,46 +18,6 @@ body {
     margin: 0 auto;
 }
 
-/* Header Section */
-header {
-    background-color: black;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    opacity: 1; /* Ensure visibility */
-    position: relative;
-    z-index: 2;
-}
-
-header h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-}
-
-header nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin-top: 10px;
-    flex-wrap: wrap;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #004080;
-}
-
 /* Hero Section */
 #hero {
     background-color: black;
@@ -174,7 +134,8 @@ form {
     gap: 15px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     padding: 10px;
     background-color: #222;
     border: none;
@@ -203,7 +164,7 @@ body.light-theme {
     color: black;
 }
 
-body.light-theme header, 
+body.light-theme header,
 body.light-theme footer {
     background-color: white;
     color: black;
@@ -246,6 +207,7 @@ body.light-theme a:hover {
     from {
         width: 0;
     }
+
     to {
         width: 100%;
     }
@@ -257,13 +219,37 @@ body.light-theme a:hover {
     }
 }
 
+/* Bottom Navigation Bar */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+.bottom-nav button {
+
+    /* background: none; */
+    border: 2px solid #131111;
+    color: white;
+    /* font-size: 1em; */
+    padding: 10px 15px;
+    /* border-radius: 21%; */
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.bottom-nav button:hover {
+    background-color: #004080;
+}
+
 /* Media Queries for Smaller Screens */
 @media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        margin-top: 20px;
-    }
-
     #hero h2 {
         font-size: 2em;
     }
@@ -276,16 +262,15 @@ body.light-theme a:hover {
         font-size: 1em;
     }
 
-    .cta-btn, .course-card a, .purchase-btn, form button {
+    .cta-btn,
+    .course-card a,
+    .purchase-btn,
+    form button {
         font-size: 0.9em;
     }
 }
 
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 2em;
-    }
-
     #hero h2 {
         font-size: 1.8em;
     }
@@ -298,7 +283,10 @@ body.light-theme a:hover {
         font-size: 0.9em;
     }
 
-    .cta-btn, .course-card a, .purchase-btn, form button {
+    .cta-btn,
+    .course-card a,
+    .purchase-btn,
+    form button {
         padding: 6px 12px;
         font-size: 0.8em;
     }
