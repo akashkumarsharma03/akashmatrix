@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultation Booking</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .animate-fade-in {
+      animation: fadeIn 1.2s ease;
+    }
+    .animate-slide-down {
+      animation: slideDown 1s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    .animate-pop-in {
+      animation: popIn 0.8s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    .animate-twinkle {
+      animation: twinkle 2s infinite alternate;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes twinkle {
+      from { opacity: 0.1; }
+      to { opacity: 0.5; }
+    }
+    @media (max-width: 640px) {
+      .rounded-2xl { border-radius: 1rem; }
+      .max-w-[420px] { max-width: 98vw !important; }
+      iframe { min-height: 500px !important; height: 500px !important; }
+    }
+  </style>
+</head>
+<body class="bg-[#232526] text-white">
+  <div class="w-full min-h-[60vh] flex justify-center items-center py-8 sm:py-16 px-2 sm:px-0 animate-fade-in" style="background: radial-gradient(circle at 50% 30%, #00eaff33 0%, #232526 100%); box-shadow: 0 0 80px 10px #00eaff44; border-radius: 2rem; position: relative; overflow: hidden;">
+    <!-- Animated glowing orb -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0">
+      <div class="w-40 h-40 sm:w-72 sm:h-72 bg-gradient-to-br from-[#00eaff] via-[#232526] to-[#171717] rounded-full blur-2xl opacity-40 animate-pulse"></div>
+    </div>
+    <!-- Animated stars -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const container = document.querySelector(".absolute.inset-0.z-0.pointer-events-none");
+          for (let i = 0; i < 30; i++) {
+            const star = document.createElement("div");
+            star.className = "absolute bg-white rounded-full opacity-30 animate-twinkle";
+            star.style.width = `${Math.random() * 2 + 1}px`;
+            star.style.height = `${Math.random() * 2 + 1}px`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.animationDelay = `${Math.random() * 2}s`;
+            container.appendChild(star);
+          }
+        });
+      </script>
+    </div>
+    <!-- Form container -->
+    <div class="relative z-10 w-full max-w-[420px] sm:max-w-[640px] rounded-2xl shadow-2xl border-2 border-white/20 bg-white/10 backdrop-blur-lg p-2 sm:p-6 flex flex-col items-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-[#00eaff] mb-2 sm:mb-4 drop-shadow-lg animate-slide-down">Book Your Consultation 🚀</h2>
+      <p class="text-white/80 text-sm sm:text-base mb-2 sm:mb-4 text-center animate-fade-in">Fill out the form below to get started. Fast, secure, and automated!</p>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfRal4nPT2-FvkK79rx8HPPVU7D0uIQET5epaaK3hNorCv4JQ/viewform?embedded=true"
+        width="100%"
+        height="900"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        class="rounded-xl border-2 border-[#00eaff] shadow-lg bg-white/10 w-full min-h-[600px] sm:min-h-[900px] animate-pop-in"
+        title="Consultation Google Form"
+      >
+        Loading…
+      </iframe>
+    </div>
+  </div>
+</body>
+</html>
